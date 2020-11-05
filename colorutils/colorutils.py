@@ -116,19 +116,25 @@ class Color(object):
     def _repr_html_(self):
         """ Rich representation for interactive notebook environments. """
         return '''
-        <div style="
-            width:80px;
-            text-align:center;
-        ">
-            <code>{0}</code>
+        <div style="display:flex">
+            <div style="padding:0.5em;flex:0">
+                <div style="
+                    background-color:{1};
+                    height:105px;
+                    width:105px;
+                    border-style:solid;
+                    border-width:2px
+                "></div>
+            </div>
+            <div style="padding:0.5em;flex:1">
+                <code>rgb: {0}</code><br/>
+                <code>hex: {1}</code><br/>
+                <code>web: {2}</code><br/>
+                <code>yiq: {3}</code><br/>
+                <code>hsv: {4}</code>
+            </div>
         </div>
-        <div style="
-            background-color:{0};
-            width:80px;
-            height:80px;
-            border-style:solid;
-            border-width:2px
-        "></div>'''.format(self.hex)
+        '''.format(self.rgb, self.hex, self.web, self.yiq, self.hsv)
 
     @property
     def red(self):
