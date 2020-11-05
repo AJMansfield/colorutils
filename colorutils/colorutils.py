@@ -119,11 +119,11 @@ class Color(object):
         <div style="display:flex">
             <div style="padding:0.5em;flex:0">
                 <div style="
-                    background-color:{1};
+                    background:{1};
                     height:105px;
                     width:105px;
-                    border-style:solid;
-                    border-width:2px
+                    border:2px solid;
+                    border-radius:6px;
                 "></div>
             </div>
             <div style="padding:0.5em;flex:1">
